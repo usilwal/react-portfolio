@@ -22,10 +22,10 @@ const Posts = () => {
     }, []);
 
     return (
-        <main className="bg-purple-200 min-h-screen p-12">
+        <main className="bg-purple-50 min-h-screen p-12">
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">
-                    Posts</h1>
+                    POSTS</h1>
                 <h2 className="text-lg text-gray-800 flex justify-center pt-3 mb-12">
                     Musings and memories</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
