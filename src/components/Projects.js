@@ -1,38 +1,49 @@
 import React, { useState, useEffect } from 'react';
+import { colorPicker, iconPicker } from "./helpers";
 import sanityClient from "../client.js";
-
+import BlockContent from "@sanity/block-content-to-react";
+import { SiCplusplus, SiCsharp, SiJava, SiJavascript, SiPython, SiRuby } from "react-icons/si"
 const Projects = () => {
     const [projectData, setProjectData] = useState(null);
     useEffect(() => {
         sanityClient.fetch(`*[_type == "project"] {
             title,
             date,
-            description,
+            body,
             languageType,
             languageList,
             frameworks_tools,
             url,
-            tags
+            tags,
+            mainImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            }
         }`)
         .then((data) => setProjectData(data))
         .catch(console.error);
     }, [])
-
+    
     return (
-        <main className="bg-purple-200 min-h-screen p-12">
-            <section className="container mx auto">
+        <main className="bg-purple-50 min-h-screen p-12">
+            <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">
-                    Projects</h1>
+                    PROJECTS</h1>
                 <h2 className="text-lg text-gray-800 flex justify-center pt-3 mb-12">
                     A collection of my applications and sites</h2>
                 <section className="grid grid-cols-2 gap-8">
                     {projectData && projectData.map((project, index) => (
-                    <article className="relative rounded-lg shadow-xl bg-white p-16">
-                        <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-blue-500">
+                    <article className={"relative shadow-l bg-white p-16 border-l-8 " + colorPicker(project.languageType)}>
+                        <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-green-500">
+                            {iconPicker(project.languageType)}
                             <a href={project.url} alt={project.title} target="_blank" rel="noopener noreferrer">
                                 {project.title}
                             </a>
                         </h3>
+
                         <div className="text-gray-500 text-xs space-x-4">
                             <span>
                                 <strong className="font-bold">Languages</strong>:{" "}
@@ -42,13 +53,22 @@ const Projects = () => {
                                 <strong className="font-bold">Frameworks and Tools</strong>:{" "}
                                 {project.frameworks_tools}
                             </span>
-                            <p className="my-6 text-lg text-gray-700 leading-relaxed">
-                                {project.description}
-                            </p>
-                            <div className="justify-center">
-                                <a href={project.url} rel="noopener noreferrer" target="_blank" className="text-blue-600 font-bold hover:underline hover:text-blue-500">
+                            { project.mainImage ? 
+                            <img src={project.mainImage.asset.url} 
+                                    alt={project.mainImage}
+                                    className="w-full object-cover rounded-t p-4 px-0"
+                                    style={{ height: "200px"}} 
+                                />
+                                : "" }
+                            <p className="my-6 text-sm text-gray-700 leading-relaxed">
+                                <BlockContent blocks={project.body} 
+                                  projectId="l6jj32fd" 
+                                  dataset="production"/>                            </p>
+                            <div className="italic align-text-bottom">
+                                { project.url ? 
+                                <a href={project.url} rel="noopener noreferrer" target="_blank" className="text-green-400 font-bold hover:underline hover:text-green-800">
                                     Project Link{" "}
-                                </a>
+                                </a> : ""}
                                 <div>
                                     <strong className="font-bold">Date</strong>:{" "} 
                                     {new Date(project.date).toLocaleDateString()}
