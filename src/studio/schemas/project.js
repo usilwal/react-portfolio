@@ -8,13 +8,22 @@ export default {
             type: "string",
         },
         {
+            name: 'mainImage',
+            title: 'Main image',
+            type: 'image',
+            options: {
+              hotspot: true,
+            },
+        },
+        {
             name: "date",
             type: "datetime",
         },
         {
-            name: "description",
-            type: "text",
-        },
+            name: 'body',
+            title: 'Body',
+            type: 'blockContent',
+          },
         {
             name: "languageType",
             title: "Main Language",
@@ -26,6 +35,7 @@ export default {
                     {value: "java", title: "Java"},
                     {value: "javascript", title: "Javascript"},
                     {value: "python", title: "Python"},
+                    {value: "ruby", title: "Ruby"},
                     {value: "multiple", title: "Multiple Languages"},
                 ],
             },
