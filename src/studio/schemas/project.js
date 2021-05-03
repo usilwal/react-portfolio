@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     name: "project",
     title: "Project",
@@ -27,13 +26,13 @@ export default {
                     {value: "java", title: "Java"},
                     {value: "javascript", title: "Javascript"},
                     {value: "python", title: "Python"},
-                    {value: "other", title: "Other"},
+                    {value: "multiple", title: "Multiple Languages"},
                 ],
             },
         },
         {
-            name: "otherlanguages",
-            title: "Other Languages",
+            name: "languageList",
+            title: "List of Languages",
             type: "string",
         },
         {
@@ -42,7 +41,7 @@ export default {
             type: "string",
         },
         {
-            name: "URL",
+            name: "url",
             type: "url",
         },
         {
