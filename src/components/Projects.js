@@ -34,9 +34,9 @@ const Projects = () => {
                     PROJECTS</h1>
                 <h2 className="text-lg text-gray-800 flex justify-center pt-3 mb-12">
                     A collection of my applications and sites</h2>
-                <section className="grid grid-cols-2 gap-8">
+                <section className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
                     {projectData && projectData.map((project, index) => (
-                    <article className={"relative shadow-l bg-white p-16 border-l-8 " + colorPicker(project.languageType)}>
+                    <article className={"relative shadow-l bg-white p-8 border-l-8 " + colorPicker(project.languageType)}>
                         <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-green-500">
                             {iconPicker(project.languageType)}
                             <a href={project.url} alt={project.title} target="_blank" rel="noopener noreferrer">
@@ -44,15 +44,15 @@ const Projects = () => {
                             </a>
                         </h3>
 
-                        <div className="text-gray-500 text-xs space-x-4">
-                            <span>
+                        <div className="text-gray-500 text-xs">
+                            <div>
                                 <strong className="font-bold">Languages</strong>:{" "}
                                 {project.languageList}
-                            </span>
-                            <span>
+                            </div>
+                            <div>
                                 <strong className="font-bold">Frameworks and Tools</strong>:{" "}
                                 {project.frameworks_tools}
-                            </span>
+                            </div>
                             { project.mainImage ? 
                             <img src={project.mainImage.asset.url} 
                                     alt={project.mainImage}
