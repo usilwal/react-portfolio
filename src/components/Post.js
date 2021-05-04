@@ -41,7 +41,7 @@ const Post = () => {
             <article className="container shadow-m mx-auto bg-purple-50 rounded-lg">
                 <header className="relative">
                     <div className="absolute h-full w-full flex items-center justify-center p-8">
-                        <div className="bg-gray-500 pl-32 pr-32 p-4 rounded">
+                        <div className="bg-gray-50 border-4 border-green-400 pl-32 pr-32 p-4 rounded">
                             <h1 className="cursive text-3xl lg:text-6xl mb-4">
                                 {post.title}
                             </h1>
@@ -59,7 +59,7 @@ const Post = () => {
                          style={{ height: "400px"}}/>
                 </header>
                 <br/>
-                <div className="bg-gray-300 text-lg px-16 py-12 leading-normal max-w-full">
+                <div className="bg-gray-300 text-lg px-16 py-8 leading-normal max-w-full">
                     <div className="mb-4 text-sm bg-gray-800 p-2 text-center text-white">
                         <i>{new Date(post.publishedAt).toLocaleDateString()}</i>
                     </div>
