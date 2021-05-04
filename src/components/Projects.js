@@ -34,7 +34,7 @@ const Projects = () => {
                     PROJECTS</h1>
                 <h2 className="text-lg text-gray-800 flex justify-center pt-3 mb-12">
                     A collection of my applications and sites</h2>
-                <section className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+                <section className="grid gap-8 sm:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3">
                     {projectData && projectData.map((project, index) => (
                     <article className={"relative shadow-l bg-white p-8 border-l-8 " + colorPicker(project.languageType)}>
                         <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-green-500">
