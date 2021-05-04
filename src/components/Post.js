@@ -60,9 +60,8 @@ const Post = () => {
                 </header>
                 <br/>
                 <div className="bg-gray-300 text-lg px-16 py-12 leading-normal max-w-full">
-                    <div className="mb-4 text-sm">
-                        <i>Post Date:{" "} 
-                        {new Date(post.publishedAt).toLocaleDateString()}</i>
+                    <div className="mb-4 text-sm bg-gray-800 p-2 text-center text-white">
+                        <i>{new Date(post.publishedAt).toLocaleDateString()}</i>
                     </div>
                     <BlockContent blocks={post.body} 
                                   projectId="l6jj32fd" 
