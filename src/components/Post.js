@@ -18,6 +18,7 @@ const Post = () => {
             .fetch(`*[slug.current == "${slug}"]{
                 title,
                 _id,
+                publishedAt,
                 slug,
                 mainImage{
                     asset->{
@@ -59,6 +60,10 @@ const Post = () => {
                 </header>
                 <br/>
                 <div className="bg-gray-300 text-lg px-16 py-12 leading-normal max-w-full">
+                    <div className="mb-4 text-sm">
+                        <i>Post Date:{" "} 
+                        {new Date(post.publishedAt).toLocaleDateString()}</i>
+                    </div>
                     <BlockContent blocks={post.body} 
                                   projectId="l6jj32fd" 
                                   dataset="production"/>
