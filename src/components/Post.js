@@ -57,7 +57,8 @@ const Post = () => {
                          className="w-full object-cover rounded-t"
                          style={{ height: "400px"}}/>
                 </header>
-                <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+                <br/>
+                <div className="bg-gray-300 text-lg px-16 py-12 leading-normal max-w-full">
                     <BlockContent blocks={post.body} 
                                   projectId="l6jj32fd" 
                                   dataset="production"/>
