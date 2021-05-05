@@ -22,7 +22,7 @@ const About = () => {
         .catch(console.error);
     }, []);
     
-    if(!author) return <div>Loading...</div>;
+    if(!author) return <div className="font-bold p-64 mx-auto bg-black text-white">Loading...</div>;
 
     return (
         <main className="relative">
