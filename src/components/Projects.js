@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { colorPicker, iconPicker } from "./helpers";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
-import { SiCplusplus, SiCsharp, SiJava, SiJavascript, SiPython, SiRuby } from "react-icons/si"
+import { SiCplusplus, SiCsharp, SiGo, SiJava, SiJavascript, SiPython, SiRuby } from "react-icons/si"
 const Projects = () => {
     const [projectData, setProjectData] = useState(null);
     useEffect(() => {

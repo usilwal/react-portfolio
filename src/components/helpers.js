@@ -1,4 +1,4 @@
-import { SiCplusplus, SiCsharp, SiJava, SiJavascript, SiPython, SiRuby } from "react-icons/si"
+import { SiCplusplus, SiCsharp, SiGo, SiJava, SiJavascript, SiPython, SiRuby } from "react-icons/si"
 
 const style = { 
     display: 'inline-block', 
@@ -13,6 +13,8 @@ export const iconPicker = (language) => {
             return < SiCplusplus size='1em' style={style}/>
         case "c#":
             return < SiCsharp size='1em' style={style}/>
+        case "golang":
+                return < SiGo size='1em' style={style}/>
         case "java":
             return < SiJava size='1em' style={style}/>
         case "javascript":
@@ -32,6 +34,8 @@ export const colorPicker = (language) => {
             return "border-blue-800"
         case "c#":
             return "border-purple-600"
+        case "golang":
+            return "border-green-200"
         case "java":
             return "border-yellow-700"
         case "javascript":

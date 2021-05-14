@@ -32,6 +32,7 @@ export default {
                 list: [
                     {value: "c++", title: "C++"},
                     {value: "c#", title: "C#"},
+                    {value: "golang", title: "Golang"},
                     {value: "java", title: "Java"},
                     {value: "javascript", title: "Javascript"},
                     {value: "python", title: "Python"},
