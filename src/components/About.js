@@ -29,8 +29,8 @@ const About = () => {
             <img src={profilebg} 
                  alt="profile background" 
                 className="absolute w-full h-full"/>
-            <div className="p-10 lg:pt-24 container mx-auto relative">
-                <section className="bg-gray-800 rounded-lg shadow-2xl lg:flex p-16">
+            <div className="lg:p-10 lg:pt-24 container mx-auto relative">
+                <section className="bg-gray-800 lg:rounded-lg shadow-2xl lg:flex p-6 lg:p-16">
                     <img src={urlFor(author.authorImage).url()} 
                          className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-16" 
                          alt={author.name} />

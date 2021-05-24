@@ -63,7 +63,7 @@ const Projects = () => {
                             <p className="my-6 text-sm text-gray-700 leading-relaxed">
                                 <BlockContent blocks={project.body} 
                                   projectId="l6jj32fd" 
-                                  dataset="production"/>                            </p>
+                                  dataset="production"/></p>
                             <div className="italic align-text-bottom">
                                 { project.url ? 
                                 <a href={project.url} rel="noopener noreferrer" target="_blank" className="text-green-400 font-bold hover:underline hover:text-green-800">
