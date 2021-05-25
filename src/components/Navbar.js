@@ -21,7 +21,7 @@ const Navbar = () => {
                         Projects
                     </NavLink>
                     <NavLink to="/about" activeClassName="text-green-400"
-                    className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-green-400">
+                    className="inline-flex items-center py-3 px-3 pr-2 my-6 rounded text-gray-200 hover:text-green-400">
                         About
                     </NavLink>
                 </nav>
