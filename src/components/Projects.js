@@ -23,6 +23,7 @@ const Projects = () => {
                 alt
             }
         }`)
+        .then((data) => data.sort((a, b) => new Date(b.date) - new Date(a.date)))
         .then((data) => setProjectData(data))
         .catch(console.error);
     }, [])
@@ -34,7 +35,7 @@ const Projects = () => {
                     PROJECTS</h1>
                 <h2 className="text-lg text-gray-800 flex justify-center pt-3 mb-12">
                     A collection of my applications and sites</h2>
-                <section className="grid gap-8 sm:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3">
+                <section className="grid gap-8 sm:grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3">
                     {projectData && projectData.map((project, index) => (
                     <article className={"relative shadow-l bg-white p-8 border-l-8 " + colorPicker(project.languageType)}>
                         <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-green-500">
@@ -56,7 +57,7 @@ const Projects = () => {
                             { project.mainImage ? 
                             <img src={project.mainImage.asset.url} 
                                     alt={project.mainImage}
-                                    className="w-full object-cover rounded-t p-4 px-0"
+                                    className="w-auto mx-auto object-cover rounded-t p-4 px-0"
                                     style={{ height: "200px"}} 
                                 />
                                 : "" }
