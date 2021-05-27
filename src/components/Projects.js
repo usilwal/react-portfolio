@@ -29,13 +29,13 @@ const Projects = () => {
     }, [])
     
     return (
-        <main className="bg-purple-50 min-h-screen p-12">
+        <main className="bg-purple-50 min-h-screen pt-12 pb-4 xs:p-12">
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">
                     PROJECTS</h1>
                 <h2 className="text-lg text-gray-800 flex justify-center pt-3 mb-12">
                     A collection of my applications and sites</h2>
-                <section className="grid gap-8 sm:grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3">
+                <section className="grid gap-4 xs:gap-8 grid-cols-1 lg:grid-cols-2 4xl:grid-cols-3">
                     {projectData && projectData.map((project, index) => (
                     <article className={"relative shadow-l bg-white p-8 border-l-8 " + colorPicker(project.languageType)}>
                         <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-green-500">
@@ -65,7 +65,7 @@ const Projects = () => {
                                 <BlockContent blocks={project.body} 
                                   projectId="l6jj32fd" 
                                   dataset="production"/></p>
-                            <div className="italic align-text-bottom">
+                            <div className="italic align-bottom">
                                 { project.url ? 
                                 <a href={project.url} rel="noopener noreferrer" target="_blank" className="text-green-400 font-bold hover:underline hover:text-green-800">
                                     Project Link{" "}
