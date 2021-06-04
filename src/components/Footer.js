@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <header className="w-100">
             <div className="bg-black border-t-2 border-green-400">
-                <div className="flex justify-center py-3 px-3 my-1 mx-4">
+                <div className="flex justify-center py-3 px-3 mt-1 mx-4">
                     <SocialIcon url="https://linkedin.com/in/utkarsh-silwal" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35} }/>
                     <SocialIcon url="https://github.com/usilwal" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35} }/>
                     <SocialIcon url="mailto:usilwal@hotmail.com" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35} }/>
