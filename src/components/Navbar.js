@@ -13,20 +13,20 @@ const Navbar = () => {
                         usilwal
                     </NavLink>
                     <NavLink to="/posts" activeClassName="text-green-400"
-                    className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-green-400">
+                    className="inline-flex items-center py-3 px-3 my-3 rounded text-gray-200 hover:text-green-400">
                         Posts
                     </NavLink>
                     <NavLink to="/projects" activeClassName="text-green-400"
-                    className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-green-400">
+                    className="inline-flex items-center py-3 px-3 my-3 rounded text-gray-200 hover:text-green-400">
                         Projects
                     </NavLink>
                     <NavLink to="/about" activeClassName="text-green-400"
-                    className="inline-flex items-center py-3 px-3 pr-1 my-6 rounded text-gray-200 hover:text-green-400">
+                    className="inline-flex items-center py-3 px-3 pr-1 my-3 rounded text-gray-200 hover:text-green-400">
                         About
                     </NavLink>
                     
                 </nav>
-                <div className="hidden sm:inline-flex py-3 px-3 my-6">
+                <div className="hidden sm:inline-flex py-3 px-3 my-3">
                     <SocialIcon url="https://linkedin.com/in/utkarsh-silwal" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35} }/>
                     <SocialIcon url="https://github.com/usilwal" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35} }/>
                     <SocialIcon url="mailto:usilwal@hotmail.com" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35} }/>
